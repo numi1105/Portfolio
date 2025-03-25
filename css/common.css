@@ -1,0 +1,196 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+
+:root {
+    font-size: 100%;
+    font-size: 62.5%;
+    --main-color: #0f5284;
+    --bg-color: #cee8f5;
+    --line-color: #85deff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+body {
+    font: 1.6rem/1.5 "Montserrat", "Noto Sans KR", sans-serif;
+}
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: url(../img/air.png) no-repeat 50% / cover;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+}
+.indicator {
+    position: fixed;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.indicator li {
+    position: relative;
+    /* border: 1px solid #000; */
+}
+.indicator li a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+.indicator li.active a {
+    opacity: 1;
+    background: var(--main-color);
+}
+.indicator li a b {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    opacity: 0;
+    transition: 0.4s;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    color: var(--main-color);
+    font-family: "jua";
+}
+
+.indicator li.active a b {
+    left: 30px;
+    opacity: 1;
+}
+.btn-top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 3px 3px 0 rgba(15, 82, 132, 0.7);
+    background: var(--main-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.loading {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 5vw;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: sk-rotate 2s infinite linear;
+    animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #0a2d49;
+    border-radius: 100%;
+
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}

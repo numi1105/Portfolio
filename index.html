@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>포트폴리오 초안</title>
+
+        <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/jquery.fullpage.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="./js/loading.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <!-- 오른쪽 제어버튼 -->
+        <!-- ul.indicator>li*4>a>b{menu$} -->
+        <ul class="indicator">
+            <li data-menuanchor="section1">
+                <a href="#section1"><b>Home</b></a>
+            </li>
+            <li data-menuanchor="section2">
+                <a href="#section2"><b>About Me</b></a>
+            </li>
+            <li data-menuanchor="section3">
+                <a href="#section3"><b>Work Experience</b></a>
+            </li>
+            <li data-menuanchor="section4">
+                <a href="#section4"><b>Contact</b></a>
+            </li>
+        </ul>
+        <header>
+            <!-- .inner>nav>h1.logo+ul.gnb>li*4>a>{menu$} -->
+            <div class="inner">
+                <nav>
+                    <h1 class="logo">unu</h1>
+                    <ul class="gnb">
+                        <li data-menuanchor="section2">
+                            <a href="#section2">About Me</a>
+                        </li>
+                        <li data-menuanchor="section3">
+                            <a href="#section3">Work Experience</a>
+                        </li>
+                        <li data-menuanchor="section4">
+                            <a href="#section4">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 🚨중요: #fullpage, .section 이름 붙이기 -->
+        <main id="fullpage">
+            <!-- section.section.section$*4>h2+p -->
+            <section class="section section1">
+                <h2 hidden>section1</h2>
+                <dl class="title">
+                    <dt>PORTFOLIO</dt>
+                    <dd class="sub-title1">Japan Business Expert</dd>
+                    <dd class="sub-title2">Eun Woo Yoo</dd>
+                </dl>
+                <figure>
+                    <img src="./img/main-bgi.png" alt="메인배경" />
+                </figure>
+            </section>
+            <section class="section section2">
+                <h2 data-aos="flip-left">About Me</h2>
+                <figure
+                    class="girl"
+                    data-aos="fade-right"
+                    data-aos-offset="2000"
+                    data-aos-duration="2000"
+                >
+                    <img src="./img/int-img.png" alt="intimg" />
+                </figure>
+                <ul class="experience-con">
+                    <li
+                        data-aos="fade-left"
+                        data-aos-offset="2000"
+                        data-aos-duration="2000"
+                    >
+                        <a href="./sub1.html">Profile</a>
+                    </li>
+                    <li
+                        data-aos="fade-left"
+                        data-aos-offset="2000"
+                        data-aos-duration="2000"
+                    >
+                        <a href="./sub1.html#section2">Skills & Competencies</a>
+                    </li>
+                    <li
+                        data-aos="fade-left"
+                        data-aos-offset="2000"
+                        data-aos-duration="2000"
+                    >
+                        <a href="./sub1.html#section3">Career Story</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="section section3">
+                <h2 data-aos="flip-left">Work Experience</h2>
+                <figure
+                    class="girl"
+                    data-aos="fade-right"
+                    data-aos-offset="2000"
+                    data-aos-duration="2000"
+                >
+                    <img src="./img/Experience1.png" alt="girl" />
+                </figure>
+                <ul class="experience-con2">
+                    <li
+                        data-aos="fade-left"
+                        data-aos-offset="2000"
+                        data-aos-duration="2000"
+                    >
+                        <a href="./sub2.html">Cosmetic</a>
+                    </li>
+                    <li
+                        data-aos="fade-left"
+                        data-aos-offset="2000"
+                        data-aos-duration="2000"
+                    >
+                        <a href="./sub2.html#section2">Beer & Food</a>
+                    </li>
+                    <li
+                        data-aos="fade-left"
+                        data-aos-offset="2000"
+                        data-aos-duration="2000"
+                    >
+                        <a href="./sub2.html#section3">Character</a>
+                    </li>
+                </ul>
+                <figure
+                    class="office"
+                    data-aos="fade-left"
+                    data-aos-offset="3000"
+                    data-aos-duration="3000"
+                >
+                    <img src="./img/5541.png" alt="office" />
+                </figure>
+            </section>
+            <section class="section section4">
+                <h2 data-aos="flip-left">Contact</h2>
+                <h3
+                    data-aos="fade-right"
+                    data-aos-offset="3000"
+                    data-aos-duration="3000"
+                >
+                    EUN WOO YOO
+                </h3>
+                <h4
+                    data-aos="fade-right"
+                    data-aos-offset="3000"
+                    data-aos-duration="3000"
+                >
+                    THANK YOU
+                </h4>
+
+                <p
+                    class="mottojp"
+                    data-aos="zoom-in"
+                    data-aos-offset="3000"
+                    data-aos-duration="3000"
+                >
+                    努力は夢を運んでくる！
+                </p>
+                <p
+                    class="mottoko"
+                    data-aos="zoom-in"
+                    data-aos-offset="3000"
+                    data-aos-duration="3000"
+                    data-aos-delay="1000"
+                >
+                    노력은 꿈을 가져다준다！
+                </p>
+
+                <div
+                    class="contact-con"
+                    data-aos="fade-left"
+                    data-aos-offset="3000"
+                    data-aos-duration="3000"
+                >
+                    <p>TEL</p>
+                    <p>010.8811.1249</p>
+                    <p>E-mail</p>
+                    <p>numi1105@naver.com</p>
+                </div>
+                <figure>
+                    <img src="./img/key.png" alt="key" />
+                </figure>
+            </section>
+        </main>
+
+        <!-- button:button.btn-top{TOP} -->
+        <button type="button" class="btn-top">TOP</button>
+        <!-- 따라다니는 애 -->
+        <div class="cursor"></div>
+    </body>
+</html>

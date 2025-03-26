@@ -80,8 +80,7 @@ $(function () {
             console.log("영역에 진입한 후 : " + anchorLink, index);
 
             // section4 영역에 진입하면 탑버튼이 보이게
-            if (anchorLink === "section4" || anchorLink === "footer")
-                $btnTop.fadeIn();
+            if (anchorLink === "section4" || anchorLink === "footer") $btnTop.fadeIn();
 
             // 초기화
             AOS.init();

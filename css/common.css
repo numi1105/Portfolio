@@ -32,11 +32,17 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+    outline: none; /* 포커스 스타일 제거 */
 }
 
 a:hover {
     text-decoration: none;
     color: var(--main-color);
+}
+
+a:focus {
+    outline: none; /* 기본 포커스 제거 */
+    box-shadow: none; /* 박스 그림자 제거 */
 }
 
 body {

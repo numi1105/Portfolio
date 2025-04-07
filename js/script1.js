@@ -123,17 +123,28 @@ $(function () {
             if (anchorLink === "section2") {
                 $(".section2 [data-aos]").addClass("aos-animate");
 
-                // SVG 애니메이션 실행
-
-                setTimeout(() => {
-                    paths.forEach((path, index) => {
-                        gsap.to(path, {
-                            strokeDashoffset: 0,
-                            duration: 1,
-                            delay: index * 0.5,
-                        });
-                    });
-                }, 2000);
+                // 텍스트 애니메이션 완료 후 SVG 애니메이션 실행
+                gsap.fromTo(
+                    ".section2 .text-animation", // 텍스트 애니메이션 대상
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        onComplete: () => {
+                            // 텍스트 애니메이션 완료 후 실행
+                            setTimeout(() => {
+                                paths.forEach((path, index) => {
+                                    gsap.to(path, {
+                                        strokeDashoffset: 0,
+                                        duration: 1,
+                                        delay: index * 0.5,
+                                    });
+                                });
+                            }, 500); // 약간의 지연 시간 추가
+                        },
+                    }
+                );
             }
 
             // section3 영역에 진입하면
